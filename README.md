@@ -1,5 +1,17 @@
 # Intent Fragmentation & Representation Failure
 
+![Python](https://img.shields.io/badge/Python-3.9+-blue?style=flat-square&logo=python)
+![PyTorch](https://img.shields.io/badge/PyTorch-2.0+-red?style=flat-square&logo=pytorch)
+![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)
+![Status](https://img.shields.io/badge/Status-MATS%2010.0%20Submission-blue?style=flat-square)
+
+**Tech Stack:**
+
+![Jupyter](https://skillicons.dev/icons?i=jupyter)
+![Python](https://skillicons.dev/icons?i=python)
+![PyTorch](https://skillicons.dev/icons?i=pytorch)
+![Git](https://skillicons.dev/icons?i=git)
+
 A mechanistic interpretability study of decomposed jailbreak attacks on Large Language Models. This repository contains analysis notebooks and experiments for understanding why decomposed prompts bypass safety mechanisms through representational failure rather than timing gaps.
 
 ## Quick Start
@@ -8,6 +20,7 @@ A mechanistic interpretability study of decomposed jailbreak attacks on Large La
 git clone https://github.com/yourusername/intent-fragmentation.git
 cd intent-fragmentation
 # Install dependencies (requires TransformerLens, PyTorch, etc.)
+pip install -r requirements.txt 
 ```
 
 ## Repository Structure
@@ -57,9 +70,9 @@ Each notebook is self-contained. To reproduce specific results:
 ## Citation
 
 ```bibtex
-@article(https://docs.google.com/document/d/1UR3Q0324tmZ6VeVrBClyUrB3NzgPodKqmYKWjMgVlA8/edit?usp=sharing),
-  title={How Harmful Intent Survives Semantic Reframing},
-  author={Ipshita},
+@article{IntentFragmentation2025,
+  title={Intent Fragmentation and Representation Failure},
+  author={Your Name},
   year={2025},
   note={MATS 10.0 Research Project}
 }

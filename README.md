@@ -8,7 +8,6 @@ A mechanistic interpretability study of decomposed jailbreak attacks on Large La
 git clone https://github.com/yourusername/intent-fragmentation.git
 cd intent-fragmentation
 # Install dependencies (requires TransformerLens, PyTorch, etc.)
-pip install -r requirements.txt 
 ```
 
 ## Repository Structure
@@ -58,9 +57,9 @@ Each notebook is self-contained. To reproduce specific results:
 ## Citation
 
 ```bibtex
-@article{IntentFragmentation2025,
-  title={Intent Fragmentation and Representation Failure},
-  author={Your Name},
+@article(https://docs.google.com/document/d/1UR3Q0324tmZ6VeVrBClyUrB3NzgPodKqmYKWjMgVlA8/edit?usp=sharing),
+  title={How Harmful Intent Survives Semantic Reframing},
+  author={Ipshita},
   year={2025},
   note={MATS 10.0 Research Project}
 }

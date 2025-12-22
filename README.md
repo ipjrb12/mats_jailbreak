@@ -70,9 +70,9 @@ Each notebook is self-contained. To reproduce specific results:
 ## Citation
 
 ```bibtex
-@article{IntentFragmentation2025,
-  title={Intent Fragmentation and Representation Failure},
-  author={Your Name},
+@article(https://docs.google.com/document/d/1UR3Q0324tmZ6VeVrBClyUrB3NzgPodKqmYKWjMgVlA8/edit?usp=sharing),
+  title={How Harmful Intent survies semantic reframing},
+  author={Ipshita},
   year={2025},
   note={MATS 10.0 Research Project}
 }

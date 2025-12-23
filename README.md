@@ -12,23 +12,51 @@
 ![PyTorch](https://skillicons.dev/icons?i=pytorch)
 ![Git](https://skillicons.dev/icons?i=git)
 
-A mechanistic interpretability study of decomposed jailbreak attacks on Large Language Models. This repository contains analysis notebooks and experiments for understanding why decomposed prompts bypass safety mechanisms through representational failure rather than timing gaps.
+A mechanistic interpretability study of decomposed jailbreak attacks on Large Language Models. This repository contains analysis notebooks and experiments for understanding why decomposed prompts bypass safety mechanisms through representational failure rather than detection and refusal gap.
 
 ## Quick Start
 
+### Prerequisites
+- Python 3.9 or higher
+- CUDA 11.8+ (for GPU acceleration, highly recommended)
+- Virtual environment (conda/venv)
+
 ```bash
-git clone https://github.com/yourusername/intent-fragmentation.git
-cd intent-fragmentation
+git clone https://github.com/ipjrb12/mats_jailbreak.git
+cd mats_jailbreak
 # Install dependencies (requires TransformerLens, PyTorch, etc.)
 pip install -r requirements.txt 
 ```
 
+
+### Installation Notes
+
+**GPU Memory Requirements:**
+- Minimum: 16GB VRAM (for Mistral-7B inference)
+- Recommended: 24GB+ VRAM (for full training + analysis)
+
+**Installing TransformerLens from Source (Latest Features):**
+
+### Dependency Overview
+
+| Category | Purpose |
+|----------|---------|
+| **torch, transformers** | Model loading and inference |
+| **transformer-lens** | Mechanistic interpretability toolkit (hook access, feature attribution) |
+| **scikit-learn, scipy** | Linear probes, statistical analysis |
+| **numpy, pandas** | Data manipulation and analysis |
+| **matplotlib, seaborn** | Visualization of results |
+| **jupyter** | Interactive notebook environment |
+| **datasets, huggingface-hub** | Model and dataset management |
+
+
+
 ## Repository Structure
 
-The codebase is organized into Jupyter notebooks, each targeting a specific component of the mechanistic analysis pipeline.
+The codebase is organized into Colab(Jupyter) notebooks, each targeting a specific component of the mechanistic analysis pipeline.
 
 ### 1. Diagnostic Analysis (Linear Probes)
-*   **`harmful vs benign.ipynb`**:
+*   **`harmful-vs-benign.ipynb`**:
     *   Trains linear probes to classify harmful vs. benign prompts across layers.
     *   **Finding:** Accuracy hovers near 0.5 (random chance), indicating polysemanticity or lack of a single "harm direction."
 *   **`decomposed_vs_undecomposed.ipynb`**:
@@ -64,7 +92,7 @@ The codebase is organized into Jupyter notebooks, each targeting a specific comp
 Each notebook is self-contained. To reproduce specific results:
 
 1.  **Refusal Gap**: Run `refusal_layer_identify.ipynb` with a standard model (e.g., Mistral-7B).
-2.  **Probe Accuracy**: Run `harmful vs benign.ipynb` to see the failure of simple probes.
+2.  **Probe Accuracy**: Run `harmful-vs-benign.ipynb` to see the failure of simple probes.
 3.  **Defense Test**: Run `Hardened_Early_intervention.ipynb` to evaluate the efficacy of early gating.
 
 ## Citation
